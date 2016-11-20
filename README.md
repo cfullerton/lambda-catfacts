@@ -1,6 +1,6 @@
 # lambda-catfacts
 
-## TODO: Write this Readme. Make the example webpage not suck
+## TODO: Write this Readme. Make a better example webpage.
 
 ## Step 1
 
