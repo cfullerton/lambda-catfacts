@@ -1,0 +1,86 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+<body>
+<style>
+.bigred {
+  color: red;
+  font-size:18px;
+  display: none;
+}
+input[type="tel"] {
+  border: 1px solid #ddd;
+  padding: 4px 8px;
+}
+input[type="tel"]:focus {
+  border: 1px solid #000;
+}
+
+input[type="submit"] {
+  font-weight: bold;
+  padding: 4px 8px;
+  border:1px solid #000;
+  background: #3b5998;
+  color:#fff;
+}
+
+form {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.p {
+  padding-top: 30px;
+}
+</style>
+  <form id="number-form">
+  <h1>Topgun Quotes</h1>
+  <p id = "alert" class="bigred"></p>
+  <p>
+    enter your (or a friend's) phone number below to sign up for hourly topgun quotes.
+    <br>
+    You can also unsubscribe below. Be sure to include the country code (1 for US).
+  </p>
+  <h2>Subscribe a Number</h2>
+  <label for="phonenum">Phone Number (format: xxxx-xxx-xxxx):</label><br/>
+  <input id="phonenum" type="tel" pattern="^\d{4}-\d{3}-\d{4}$" required >
+
+  <input type=submit id="btn-subscribe" ></input>
+</form>
+<form id="number-form-un">
+<h2>Unsubscribe a Number</h2>
+<label for="phonenum-un">Phone Number (format: xxxx-xxx-xxxx):</label><br/>
+<input id="phonenum-un" type="tel" pattern="^\d{4}-\d{3}-\d{4}$" required >
+
+<input type=submit id="btn-unsubscribe" ></input>
+</form>
+<script>
+$('#number-form').submit(function () {
+ var url = 'api-url' + $('#phonenum').val();
+$('#alert').text($('#phonenum').val() + " Subscribed");
+$('#alert').fadeIn("slow",function(){
+  //$('#alert').fadeOut("slow");
+});
+ $.get(url, function( data ) {
+  console.log(data);
+
+});
+ return false;
+});
+$('#number-form-un').submit(function () {
+  var unNum = $('#phonenum-un').val().replace(/-/g, "");
+  var url = 'api-url' + unNum;
+$('#alert').text($('#phonenum-un').val() + " Unsubcribed");
+  $('#alert').fadeIn("slow",function(){
+    //$('#alert').fadeOut("slow");
+  });
+  $.get(url, function( data ) {
+   console.log(data);
+  });
+ return false;
+});
+</script>
+</body>
+</html>
