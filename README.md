@@ -1,5 +1,7 @@
 # lambda-catfacts
 
+## TODO: Write this Readme. Make the example webpage not suck
+
 ## Step 1
 
   Create a new sns topic. Note its ARN, you will be using this topic to subscribe endpoints and  publish topics to. 
