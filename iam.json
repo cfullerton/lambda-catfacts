@@ -1,0 +1,16 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "your-sid",
+            "Action": [
+                "sns:Publish",
+                "sns:Subscribe",
+                "sns:Unsubscribe",
+                "sns:ListSubscriptionsByTopic"
+            ],
+            "Effect": "Allow",
+            "Resource": "your-topic-arn"
+        }
+    ]
+}
