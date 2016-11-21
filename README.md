@@ -19,4 +19,9 @@
   
 ## Step 4 - Create Application Gateway
   - Create a new API with two resources "subscribe" and "unsubscribe"
-  - 
+  - Create GET endpoints on both.
+  - Add the query property "number" to both.
+  - Use the apigateway-mapping file for both, copy/paste exactly.
+  - Set them to trigger the corrosponding functions in step 3
+ 
+After theses steps, you now have the subscribe/unsubscribe api and texting set up. You now need to host a static file that makes requests to your API endpoints with the query string ?number=. You can do this a million ways, below is how to do it with AWS:
