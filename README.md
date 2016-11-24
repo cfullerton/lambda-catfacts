@@ -2,6 +2,8 @@
 
 ## TODO: Make a better example webpage.
 
+A "Cat Facts" clone made using AWS services and node.js. Sends texts to a group on a schedule. Use the code in this repo and these steps to create your own:
+
 ## Step 1 - Create SNS Topics
 
   - Create a new sns topic. Note its ARN, you will be using this topic to subscribe endpoints and  publish topics to.
