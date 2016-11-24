@@ -13,5 +13,7 @@ exports.handler = function(event, context) {
         Subject: "some subject", // shows up at the beginning of every text
         TopicArn: "your-topic-arn" //fill in your topic arn
     };
-    sns.publish(params, context.done);
+    if (today <= 5 || today <= 14) {
+        sns.publish(params, context.done);
+    }
 };
