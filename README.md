@@ -3,7 +3,7 @@
 ## TODO:
  - make a better example webpage
  - make this readme more clear
- - support more than 10o users in unsubscribe
+ - support more than 100 users in unsubscribe
 
 A "Cat Facts" clone made using AWS services and node.js. Sends texts to a group on a schedule. Use the code in this repo and these steps to create your own:
 
