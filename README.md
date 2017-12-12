@@ -32,7 +32,7 @@ A "Cat Facts" clone made using AWS services and node.js. Sends texts to a group 
 After theses steps, you now have the subscribe/unsubscribe api and texting set up. You now need to host a static file that makes requests to your API endpoints with the query string ?number=. You can do this a million ways, below is how to do it with AWS:
 
 ## step 5 - Add Static page
- - Create a s2 bucket with the same name as your subscribe / unsubscribe website
+ - Create a s3 bucket with the same name as your subscribe / unsubscribe website
  - Upload a index.html from above
  - Enable webpage serving on the bucket
- - point your DNS to your S2 bucket
+ - point your DNS to your S3 bucket
